@@ -1,15 +1,18 @@
 
 import { User } from '@/types';
-import { mockData, currentUser } from './mock/mockData';
+import { mockData } from './mock/mockData';
+
+// Local state for tracking the current user
+let currentUserState: User | null = null;
 
 export const UserService = {
   getCurrentUser: () => {
-    return currentUser;
+    return currentUserState;
   },
 
   setCurrentUser: (userId: string) => {
-    currentUser = mockData.users.find(user => user.id === userId) || null;
-    return currentUser;
+    currentUserState = mockData.users.find(user => user.id === userId) || null;
+    return currentUserState;
   },
 
   getAllUsers: () => {

@@ -1,4 +1,3 @@
-
 import { User, Match, Message, Notification } from '@/types';
 
 // Mock data for testing
@@ -132,6 +131,3 @@ export const mockData = {
   messages: [] as Message[],
   notifications: [] as Notification[],
 };
-
-// Current user (for testing/demo purposes)
-export let currentUser: User | null = null;
