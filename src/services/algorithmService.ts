@@ -1,5 +1,5 @@
 
-import { User, Match, UserPreference } from '@/types';
+import { User, Match } from '@/types';
 import { DataService } from './dataService';
 
 export const AlgorithmService = {
