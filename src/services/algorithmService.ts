@@ -83,7 +83,7 @@ export const AlgorithmService = {
     // Calculate compatibility scores
     const scoredMatches = potentialMatches.map(match => ({
       user: match,
-      score: this.calculateCompatibility(user, match)
+      score: AlgorithmService.calculateCompatibility(user, match) // Fixed: Use AlgorithmService instead of this
     }));
     
     // Sort by compatibility score
